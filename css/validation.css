@@ -1,0 +1,11 @@
+/* Validation message style */
+.error {
+   color: #ff0000;
+   font-size: 18px;
+   font-weight: bold;
+   background: #fff;
+   padding: 6px 10px;
+   border-radius: 5px;
+   display: inline-block;
+   margin-top: 4px;
+}

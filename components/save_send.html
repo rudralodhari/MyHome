@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Save / Send Request (Static)</title>
+</head>
+<body>
+  <h1>Save Listing / Send Request Requires Server-Side</h1>
+  <p>
+    The original <code>save_send.php</code> handled two actions posted from forms:
+  </p>
+  <ul>
+    <li>Toggle save/unsave a listing for the logged-in user.</li>
+    <li>Send a contact/request from a buyer to a property owner.</li>
+  </ul>
+  <p>
+    These operations require a backend (database, authentication, server endpoints).
+    In a static HTML version, implement equivalents via client-side UI only, or wire
+    to a backend API.
+  </p>
+  <h2>Example static-only UX</h2>
+  <pre><code>&lt;!-- Save button mock (no DB) --&gt;
+&lt;button id="saveBtn" type="button"&gt;Save&lt;/button&gt;
+&lt;script&gt;
+const btn = document.getElementById('saveBtn');
+let saved = false;
+btn.addEventListener('click', () =&gt; {
+  saved = !saved;
+  btn.textContent = saved ? 'Unsave' : 'Save';
+  alert(saved ? 'listing saved!' : 'removed from saved!');
+});
+&lt;/script&gt;
+  </code></pre>
+</body>
+</html>

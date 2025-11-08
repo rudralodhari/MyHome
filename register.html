@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Register</title>
+
+ 
+   <!-- font awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- your main css -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- validation css -->
+   <link rel="stylesheet" href="css/validation.css">
+</head>
+<body>
+   
+<!-- header section starts  -->
+<header class="header">
+   <nav class="navbar nav-1">
+      <section class="flex">
+         <a href="home.html" class="logo"><i class="fas fa-house"></i>MyHome</a>
+         <ul>
+            <li><a href="post-property.html">post property<i class="fas fa-paper-plane"></i></a></li>
+         </ul>
+      </section>
+   </nav>
+
+   <nav class="navbar nav-2">
+      <section class="flex">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div class="menu">
+            <ul>
+               <li><a href="listings.html">buy<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="search.html?type=house">house</a></li>
+                     <li><a href="search.html?type=flat">flat</a></li>
+                     <li><a href="search.html?type=shop">shop</a></li>
+                     <li><a href="search.html?status=ready">ready to move</a></li>
+                     <li><a href="search.html?furnished=1">furnished</a></li>
+                  </ul>
+               </li>
+               <li><a href="post-property.html">sell<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="post-property.html">post property</a></li>
+                     <li><a href="dashboard.html">dashboard</a></li>
+                  </ul>
+               </li>
+               <li><a href="listings.html?for=rent">rent<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="search.html?for=rent&type=house">house</a></li>
+                     <li><a href="search.html?for=rent&type=flat">flat</a></li>
+                     <li><a href="search.html?for=rent&type=shop">shop</a></li>
+                  </ul>
+               </li>
+               <li><a href="contact.html#faq">help<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="about.html">about us</a></li>
+                     <li><a href="contact.html">contact us</a></li>
+                     <li><a href="contact.html#faq">FAQ</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+
+         <ul>
+            <li><a href="saved.html">saved <i class="far fa-heart"></i></a></li>
+            <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+               <ul>
+                  <li><a href="login.html">login</a></li>
+                  <li><a href="register.html">register</a></li>
+               </ul>
+            </li>
+         </ul>
+      </section>
+   </nav>
+</header>
+<!-- header section ends -->
+
+<!-- register section starts  -->
+<section class="form-container">
+   <form id="register-form" onsubmit="return validateForm()">
+      <h3>create an account!</h3>
+
+      <input type="text" id="name" name="name" maxlength="50" placeholder="enter your name" class="box">
+      <span id="err-name" class="error"></span>
+
+      <input type="email" id="email" name="email" maxlength="50" placeholder="enter your email" class="box">
+      <span id="err-email" class="error"></span>
+
+      <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your phone number" class="box" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+      <span id="err-phone" class="error"></span>
+
+      <input type="password" id="pass" name="pass" maxlength="20" placeholder="enter your password" class="box">
+      <span id="err-pass" class="error"></span>
+
+      <input type="password" id="c_pass" name="c_pass" maxlength="20" placeholder="confirm your password" class="box">
+      <span id="err-cpass" class="error"></span>
+
+      <div class="box gender-box">
+         <p>gender :</p>
+         <label><input type="radio" name="gender" value="male"> male</label>
+         <label><input type="radio" name="gender" value="female"> female</label>
+         <label><input type="radio" name="gender" value="other"> other</label>
+      </div>
+      <span id="err-gender" class="error"></span>
+
+      <input type="date" name="dob" id="dob" class="box" placeholder="date of birth">
+      <span id="err-dob" class="error"></span>
+
+      <textarea name="address" id="address" maxlength="300" placeholder="enter your address" class="box" rows="3"></textarea>
+      <span id="err-address" class="error"></span>
+
+      <select name="occupation" id="occupation" class="box">
+         <option value="" disabled selected>select your occupation</option>
+         <option value="student">Student</option>
+         <option value="employed">Employed</option>
+         <option value="self_employed">Self-employed</option>
+         <option value="homemaker">Homemaker</option>
+         <option value="retired">Retired</option>
+         <option value="other">Other</option>
+      </select>
+      <span id="err-occupation" class="error"></span>
+
+      <p>
+         <label>
+            <input type="checkbox" id="terms" name="terms">
+            I accept the <a href="terms.html">Terms</a> & <a href="privacy.html">Privacy</a>
+         </label>
+      </p>
+      <span id="err-terms" class="error"></span>
+
+      <p>already have an account? <a href="login.html">login now</a></p>
+      <input type="submit" value="register now" name="submit" class="btn">
+   </form>
+</section>
+<!-- register section ends -->
+
+<!-- footer section starts  -->
+<footer class="footer">
+   <section class="flex">
+      <div class="box">
+         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>+91 1234567890</span></a>
+         <a href="tel:0987654321"><i class="fas fa-phone"></i><span>+91 0987654321</span></a>
+         <a href="mailto:myhome@gmail.com"><i class="fas fa-envelope"></i><span>myhome@gmail.com</span></a>
+         <a href="https://maps.google.com/?q=Porbandar,Gujarat,India" target="_blank"><i class="fas fa-map-marker-alt"></i><span>Porbandar, Gujarat, India - 360575</span></a>
+      </div>
+   </section>
+   <div class="credit">&copy; copyright @ 2025 by <span>MyHome</span> | all rights reserved!</div>
+</footer>
+<!-- footer section ends -->
+
+<!-- ✅ Validation Script -->
+<script src="js/validation.js"></script>
+
+</body>
+</html>

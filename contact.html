@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <link rel="stylesheet" href="css/validation.css">
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <nav class="navbar nav-1">
+      <section class="flex">
+         <a href="home.html" class="logo"><i class="fas fa-house"></i>MyHome</a>
+
+         <ul>
+            <li><a href="post-property.html">post property<i class="fas fa-paper-plane"></i></a></li>
+         </ul>
+      </section>
+   </nav>
+
+   <nav class="navbar nav-2">
+      <section class="flex">
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+         <div class="menu">
+            <ul>
+               <li><a href="listings.html">buy<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="search.html?type=house">house</a></li>
+                     <li><a href="search.html?type=flat">flat</a></li>
+                     <li><a href="search.html?type=shop">shop</a></li>
+                     <li><a href="search.html?status=ready">ready to move</a></li>
+                     <li><a href="search.html?furnished=1">furnished</a></li>
+                  </ul>
+               </li>
+               <li><a href="post-property.html">sell<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="post-property.html">post property</a></li>
+                     <li><a href="dashboard.html">dashboard</a></li>
+                  </ul>
+               </li>
+               <li><a href="listings.html?for=rent">rent<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="search.html?for=rent&type=house">house</a></li>
+                     <li><a href="search.html?for=rent&type=flat">flat</a></li>
+                     <li><a href="search.html?for=rent&type=shop">shop</a></li>
+                  </ul>
+               </li>
+               <li><a href="contact.html#faq">help<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="about.html">about us</a></i></li>
+                     <li><a href="contact.html">contact us</a></i></li>
+                     <li><a href="contact.html#faq">FAQ</a></i></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+
+         <ul>
+            <li><a href="saved.html">saved <i class="far fa-heart"></i></a></li>
+            <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+               <ul>
+                  <li><a href="login.html">login</a></li>
+                  <li><a href="register.html">register</a></li>
+               </ul>
+            </li>
+         </ul>
+      </section>
+   </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact">
+
+   <div class="row">
+      <div class="image">
+         <img src="images/contact-img.svg" alt="">
+      </div>
+      <form id="contact-form" onsubmit="return validateContact()" novalidate>
+         <h3>Get in Touch</h3>
+
+         <input type="text" id="name" name="name" maxlength="50" placeholder="Enter your name" class="box">
+         <span id="err-name" class="error"></span>
+
+         <input type="email" id="email" name="email" maxlength="50" placeholder="Enter your email" class="box">
+         <span id="err-email" class="error"></span>
+
+         <input type="tel" id="number" name="number" maxlength="10" placeholder="Enter your number" class="box">
+         <span id="err-number" class="error"></span>
+
+         <textarea id="message" name="message" placeholder="Enter your message" maxlength="1000" cols="30" rows="10" class="box"></textarea>
+         <span id="err-message" class="error"></span>
+
+         <input type="submit" value="Send Message" name="send" class="btn">
+      </form>
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- faq section starts  -->
+
+<section class="faq" id="faq">
+
+   <h1 class="heading">FAQ</h1>
+
+   <div class="box-container">
+
+      <div class="box active">
+         <h3><span>how to cancel booking?</span><i class="fas fa-angle-down"></i></h3>
+         <p>You can cancel your booking from the “My Bookings” section in your dashboard. Select the property and click on the cancel option. Charges may apply as per policy.</p>
+      </div>
+      
+      <div class="box active">
+         <h3><span>when will I get the possession?</span><i class="fas fa-angle-down"></i></h3>
+         <p>The possession date depends on the project completion timeline. Once the construction is complete and all approvals are cleared, we will notify you via email and SMS regarding handover.</p>
+      </div>
+      
+      <div class="box">
+         <h3><span>where can I pay the rent?</span><i class="fas fa-angle-down"></i></h3>
+         <p>You can pay your rent securely through our online portal using debit/credit cards, net banking, or UPI. Offline options such as cheque or cash payments at the office are also available.</p>
+      </div>
+      
+      <div class="box">
+         <h3><span>how to contact with the buyers?</span><i class="fas fa-angle-down"></i></h3>
+         <p>Registered buyers can be contacted directly through the in-app chat or by requesting a call back. Your contact details remain protected until you confirm communication.</p>
+      </div>
+      
+      <div class="box">
+         <h3><span>why my listing not showing up?</span><i class="fas fa-angle-down"></i></h3>
+         <p>Your listing may be under review for verification. Please ensure all details are correct, images are clear, and documents are submitted. It usually takes 24–48 hours to go live.</p>
+      </div>
+      
+      <div class="box">
+         <h3><span>how to promote my listing?</span><i class="fas fa-angle-down"></i></h3>
+         <p>You can promote your listing by choosing a premium plan, which highlights your property at the top of search results. Featured ads and social media promotions are also available.</p>
+      </div>      
+
+   </div>
+
+</section>
+
+<!-- faq section ends -->
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<footer class="footer">
+
+   <section class="flex">
+
+      <div class="box">
+         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>+91 1234567890</span></a>
+         <a href="tel:0987654321"><i class="fas fa-phone"></i><span>+91 0987654321</span></a>
+         <a href="mailto:myhome@gmail.com"><i class="fas fa-envelope"></i><span>myhome@gmail.com</span></a>
+         <a href="https://maps.google.com/?q=Porbandar,Gujarat,India" target="_blank"><i class="fas fa-map-marker-alt"></i><span>Porbandar, Gujarat, India - 360575</span></a>
+      </div>
+
+      <div class="box">
+         <a href="home.html"><span>home</span></a>
+         <a href="about.html"><span>about</span></a>
+         <a href="contact.html"><span>contact</span></a>
+         <a href="listings.html"><span>all listings</span></a>
+      </div>
+
+      <div class="box">
+         <a href="https://facebook.com" target="_blank"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+         <a href="https://twitter.com" target="_blank"><span>twitter</span><i class="fab fa-twitter"></i></a>
+         <a href="https://linkedin.com" target="_blank"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+         <a href="https://instagram.com" target="_blank"><span>instagram</span><i class="fab fa-instagram"></i></a>
+
+      </div>
+
+   </section>
+
+   <div class="credit">&copy; copyright @ 2025 by <span>MyHome</span> | all rights reserved!</div>
+
+</footer>
+
+<!-- footer section ends -->
+
+<script src="js/validation.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>User Logout (Static)</title>
+</head>
+<body>
+  <h1>Logout Requires Server-Side</h1>
+  <p>
+    The original <code>user_logout.php</code> cleared the <code>user_id</code> cookie and redirected to
+    <code>../home.php</code>. In static HTML, cookies cannot be reliably cleared
+    or redirected without JavaScript and a server.
+  </p>
+  <p>
+    Suggested replacement:
+  </p>
+  <ol>
+    <li>Remove the <code>user_id</code> cookie via JavaScript if it was set on the same domain.</li>
+    <li>Redirect users to <code>../home.html</code>.</li>
+  </ol>
+  <pre><code>&lt;script&gt;
+// Example only; adjust cookie name/path as needed
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+}
+
+deleteCookie('user_id');
+window.location.href = '../home.html';
+&lt;/script&gt;
+  </code></pre>
+</body>
+</html>
