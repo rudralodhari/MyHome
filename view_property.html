@@ -149,9 +149,7 @@
       </div>
       <h3 class="title">description</h3>
       <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cupiditate aliquid ipsum recusandae maxime nisi, velit eaque, libero, exercitationem culpa accusamus. Neque dolor quaerat modi saepe facere dignissimos temporibus molestias.</p>
-      <form action="" method="post">
-         <input type="submit" value="save property" name="save" class="inline-btn">
-      </form>
+      <button type="button" class="inline-btn" onclick="saveProperty()">save property</button>
    </div>
 
 </section>
@@ -168,7 +166,7 @@
 
 
 
-
+<!-- footer section starts  -->
 <!-- footer section starts  -->
 
 <footer class="footer">
@@ -208,6 +206,11 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script>
+function saveProperty() {
+   alert('Property saved successfully!');
+}
+</script>
 
 </body>
 </html>

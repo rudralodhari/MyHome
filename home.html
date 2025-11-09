@@ -92,7 +92,7 @@
 
    <section class="center">
 
-      <form action="search.html" method="post" onsubmit="return validateLocation()">
+      <form action="listings.html" method="get" onsubmit="return validateLocation()">
    <h3>find your perfect home</h3>
    <div class="box">
       <p>enter location <span>*</span></p>
@@ -257,9 +257,7 @@
          <div class="thumb">
             <p class="total-images"><i class="far fa-image"></i><span>6</span></p>
             <p class="type"><span>house</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
+            <button type="button" class="far fa-heart save" onclick="saveProperty(1)"></button>
             <img src="images/house-img-1.webp" alt="">
          </div>
          <h3 class="name">Luxury Villa with Garden</h3>
@@ -283,9 +281,7 @@
          <div class="thumb">
             <p class="total-images"><i class="far fa-image"></i><span>5</span></p>
             <p class="type"><span>flat</span><span>rent</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
+            <button type="button" class="far fa-heart save" onclick="saveProperty(2)"></button>
             <img src="images/house-img-2.webp" alt="">
          </div>
          <h3 class="name">Modern 2BHK Apartment</h3>
@@ -309,9 +305,7 @@
          <div class="thumb">
             <p class="total-images"><i class="far fa-image"></i><span>7</span></p>
             <p class="type"><span>shop</span><span>sale</span></p>
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
+            <button type="button" class="far fa-heart save" onclick="saveProperty(3)"></button>
             <img src="images/house-img-3.jpg" alt="">
          </div>
          <h3 class="name">Prime Commercial Space</h3>
@@ -383,6 +377,11 @@
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 <script src="js/validation.js"></script>
+<script>
+function saveProperty(id) {
+   alert('Property saved successfully!');
+}
+</script>
 
 </body>
 </html>
