@@ -57,10 +57,7 @@
                   <td><a href="tel:+19999999999">+1 999 999 9999</a></td>
                   <td>Hello! I'm interested in your listing.</td>
                   <td>
-                     <form action="#" method="POST">
-                        <input type="hidden" name="delete_id" value="1">
-                        <input type="submit" value="delete message" onclick="return confirm('delete this message?');" name="delete" class="delete-btn">
-                     </form>
+                     <button class="delete-btn" onclick="deleteItem('message', 1, 'John Doe')">delete message</button>
                   </td>
                </tr>
             </tbody>
@@ -70,6 +67,14 @@
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
    <script src="../js/admin_script.js"></script>
+   <script>
+   function deleteItem(type, id, name) {
+      if(confirm('Delete this ' + type + '?')) {
+         alert(name + ' deleted successfully!');
+         location.reload();
+      }
+   }
+   </script>
    <!-- message placeholder (was include '../components/message.php') -->
 </body>
 </html>

@@ -48,17 +48,24 @@
             <p class="price"><i class="fas fa-indian-rupee-sign"></i>1200000</p>
             <h3 class="name">Sample Property</h3>
             <p class="location"><i class="fas fa-map-marker-alt"></i>Sample Address</p>
-            <form action="#" method="POST">
-               <input type="hidden" name="delete_id" value="1">
+            <div>
                <a href="view_property.html" class="btn">view property</a>
-               <input type="submit" value="delete listing" onclick="return confirm('delete this listing?');" name="delete" class="delete-btn">
-            </form>
+               <button class="delete-btn" onclick="deleteItem('listing', 1, 'Sample Property')">delete listing</button>
+            </div>
          </div>
       </div>
    </section>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
    <script src="../js/admin_script.js"></script>
+   <script>
+   function deleteItem(type, id, name) {
+      if(confirm('Delete this ' + type + '?')) {
+         alert(name + ' deleted successfully!');
+         location.reload();
+      }
+   }
+   </script>
    <!-- message placeholder (was include '../components/message.php') -->
 </body>
 </html>

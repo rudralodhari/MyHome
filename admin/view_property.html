@@ -95,10 +95,9 @@
          </div>
          <h3 class="title">description</h3>
          <p class="description">Nice neighborhood with great connectivity.</p>
-         <form action="#" method="post" class="flex-btn">
-            <input type="hidden" name="delete_id" value="1">
-            <input type="submit" value="delete property" name="delete" class="delete-btn" onclick="return confirm('delete this listing?');">
-         </form>
+         <div class="flex-btn">
+            <button class="delete-btn" onclick="deleteProperty(1, 'Sample Property')">delete property</button>
+         </div>
       </div>
    </section>
 
@@ -106,6 +105,14 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
    <script src="../js/admin_script.js"></script>
    <!-- message placeholder (was include '../components/message.php') -->
+   <script>
+   function deleteProperty(id, name) {
+      if(confirm('Delete this property?')) {
+         alert(name + ' deleted successfully!');
+         window.location.href = 'listings.html';
+      }
+   }
+   </script>
    <script>
    var swiper = new Swiper(".images-container", {
       effect: "coverflow",

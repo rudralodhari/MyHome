@@ -60,19 +60,13 @@
                <tr>
                   <td>admin user</td>
                   <td>
-                     <form action="#" method="POST">
-                        <input type="hidden" name="delete_id" value="1">
-                        <input type="submit" value="delete admin" onclick="return confirm('delete this admin?');" name="delete" class="delete-btn">
-                     </form>
+                     <button class="delete-btn" onclick="deleteItem('admin', 1, 'admin user')">delete admin</button>
                   </td>
                </tr>
                <tr>
                   <td>another admin</td>
                   <td>
-                     <form action="#" method="POST">
-                        <input type="hidden" name="delete_id" value="2">
-                        <input type="submit" value="delete admin" onclick="return confirm('delete this admin?');" name="delete" class="delete-btn">
-                     </form>
+                     <button class="delete-btn" onclick="deleteItem('admin', 2, 'another admin')">delete admin</button>
                   </td>
                </tr>
             </tbody>
@@ -82,6 +76,14 @@
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
    <script src="../js/admin_script.js"></script>
+   <script>
+   function deleteItem(type, id, name) {
+      if(confirm('Delete this ' + type + '?')) {
+         alert(name + ' deleted successfully!');
+         location.reload();
+      }
+   }
+   </script>
    <!-- message placeholder (was include '../components/message.php') -->
 </body>
 </html>
