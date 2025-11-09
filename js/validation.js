@@ -375,6 +375,14 @@ function validateAdminLogin() {
    if (password == "") {
       document.getElementById("err-password").textContent = "Please enter your password";
       valid = false;
+   } else {
+      // 8+ chars, uppercase, lowercase, number, symbol
+      const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!passwordPattern.test(password)) {
+         document.getElementById("err-password").textContent =
+            "Invalid Password";
+         valid = false;
+      }
    }
 
    if (!valid) {
