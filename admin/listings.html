@@ -48,10 +48,8 @@
             <p class="price"><i class="fas fa-indian-rupee-sign"></i>1200000</p>
             <h3 class="name">Sample Property</h3>
             <p class="location"><i class="fas fa-map-marker-alt"></i>Sample Address</p>
-            <div>
-               <a href="view_property.html" class="btn">view property</a>
-               <button class="delete-btn" onclick="deleteListing(1, 'Sample Property')">delete listing</button>
-            </div>
+            <a href="view_property.html" class="btn">view property</a>
+            <a href="#" class="delete-btn" onclick="return deleteListing(1, 'Sample Property')">delete listing</a>
          </div>
       </div>
    </section>
@@ -60,10 +58,12 @@
    <script src="../js/admin_script.js"></script>
    <script>
    function deleteListing(id, name) {
-      if(confirm('Delete this listing?')) {
+      if(confirm('Delete this property?')) {
          alert(name + ' deleted successfully!');
          window.location.href = 'listings.html';
+         return false;
       }
+      return false;
    }
    </script>
    <!-- message placeholder (was include '../components/message.php') -->
