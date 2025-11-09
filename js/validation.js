@@ -397,14 +397,19 @@ function validateLocation() {
    // clear previous error
    errorMsg.textContent = "";
 
-   if (locationInput.value.trim() == "") {
+   if (locationInput.value.trim() === "") {
       errorMsg.textContent = "Please enter a location.";
       locationInput.focus();
-      return false;
+      return false; // stop form submission
    }
 
+   // success alert
    alert("✅ Searching properties...");
-   return true;
+
+   // redirect to listings.html
+   window.location.href = "listings.html";
+
+   return false; // prevent default form submission (no 405 error)
 }
 
 
@@ -416,12 +421,16 @@ function validateFilterLocation() {
    // clear old error
    errorMsg.textContent = "";
 
-   if (locationInput.value.trim() == "") {
+   if (locationInput.value.trim() === "") {
       errorMsg.textContent = "Please enter a location.";
       locationInput.focus();
       return false;
    }
 
    alert("✅ Searching properties...");
-   return true;
+
+   // Redirect to listings.html instead of POSTing (prevents 405 error)
+   window.location.href = "listings.html";
+
+   return false; // stop form from actually submitting
 }
