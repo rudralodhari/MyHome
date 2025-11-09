@@ -50,7 +50,7 @@
             <p class="location"><i class="fas fa-map-marker-alt"></i>Sample Address</p>
             <div>
                <a href="view_property.html" class="btn">view property</a>
-               <button class="delete-btn" onclick="deleteItem('listing', 1, 'Sample Property')">delete listing</button>
+               <button class="delete-btn" onclick="deleteListing(1, 'Sample Property')">delete listing</button>
             </div>
          </div>
       </div>
@@ -59,10 +59,10 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
    <script src="../js/admin_script.js"></script>
    <script>
-   function deleteItem(type, id, name) {
-      if(confirm('Delete this ' + type + '?')) {
+   function deleteListing(id, name) {
+      if(confirm('Delete this listing?')) {
          alert(name + ' deleted successfully!');
-         location.reload();
+         window.location.href = 'listings.html';
       }
    }
    </script>
