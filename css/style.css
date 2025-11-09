@@ -1069,4 +1069,27 @@ section{
       grid-template-columns: 1fr;
    }
 
+   .footer .flex{
+      flex-direction: column;
+      gap: 1.5rem;
+   }
+
+   .footer .flex .box{
+      text-align: center !important;
+      flex: 1 1 100%;
+   }
+
+   .footer .flex .box:first-child a i{
+      margin-right: 1rem;
+   }
+
+   .footer .flex .box:last-child a i{
+      margin-left: 1rem;
+   }
+
+   .footer .credit{
+      font-size: 1.6rem;
+      padding: 2rem 1rem;
+   }
+
 }
